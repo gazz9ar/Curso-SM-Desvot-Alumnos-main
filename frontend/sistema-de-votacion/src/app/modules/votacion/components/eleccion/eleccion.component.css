@@ -1,0 +1,6 @@
+.option-list{
+  list-style: none;
+}
+.option-list li{
+  margin-bottom: 10px;
+}

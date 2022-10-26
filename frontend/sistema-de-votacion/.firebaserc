@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "elecciones-descentralizadas": {
+      "hosting": {
+        "sistema-de-votacion": [
+          "elecciones-descentralizadas"
+        ]
+      }
+    }
+  }
+}

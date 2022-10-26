@@ -1,0 +1,9 @@
+.container-fluid{
+  background: linear-gradient(90deg, rgba(95,57,200,1) 0%, rgba(108,62,193,1) 35%, rgba(166,93,179,1) 100%);
+  color: white;
+  height: 100%;
+}
+.btn-connect{
+  background-color: black;
+  margin: 5px;
+}

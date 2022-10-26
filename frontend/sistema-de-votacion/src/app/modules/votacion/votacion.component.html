@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center my-4">
+            <h1>Desvot</h1>
+            <button class="btn-prin" (click)="conectarWallet()">Conectar wallet</button>
+            <ng-container *ngIf="currentWalletOb | async as currentWallet">
+                <h5 >Logged with:{{currentWallet}}</h5>
+            </ng-container>   
+            <ng-container *ngIf="totalEther | async as totalEther">
+                <strong>Current pool: {{totalEther}} Ether</strong>      
+            </ng-container>       
+            <ng-container *ngIf="winner | async as winner">
+                <strong>Winner address: {{winner}}</strong>      
+            </ng-container>  
+           
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-4 custom-section b-r">
+            <app-candidatos></app-candidatos>
+        </div>
+        <div class="col-4 custom-section b-r">
+            <app-votantes></app-votantes>
+        </div>
+        <div class="col-4 custom-section">
+            <app-eleccion></app-eleccion>
+        </div>
+    </div>
+</div>

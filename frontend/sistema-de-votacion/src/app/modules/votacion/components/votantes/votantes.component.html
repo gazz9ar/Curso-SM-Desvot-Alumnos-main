@@ -1,0 +1,43 @@
+<div class="contenido-general">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h3>Votantes</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="../../../../../assets/votante/votante.png" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 my-3">
+            <h4>Registrar votante</h4>
+        </div>
+        <div>
+            <label class="custom-label" for="">Direccion del votante</label>
+        </div>
+        <div class="col-12 align-rigth">
+            <div>
+                <input class="custom-inpt w-100" type="text" [formControl]="direccionVotante">
+            </div>
+        </div>
+        <div class="col-12 align-rigth">
+            <button class="btn-prin w-100" (click)="registrarVotante()">Registrar nuevo votante</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 my-3">
+            <h4>Emitir voto</h4>
+        </div>
+        <div>
+            <label class="custom-label" for="">Candidatos registrados</label>
+            <button (click)="refrescarCuentas()" class="btn-none"><img class="img-refresh" src="../../../../../assets/iconos/refresh-page-option.png"></button>
+        </div>
+        <div class="col-12 align-rigth">
+            <select class="w-100 custom-select" [formControl]="cuentasHControl">
+            <option *ngFor="let item of cuentasHabilitadas" value="{{item.direccionCuenta}}">{{item.direccionCuenta}}</option>
+      </select>
+            <button class="btn-prin w-100" (click)="votar()">Votar</button>
+        </div>
+    </div>
+</div>

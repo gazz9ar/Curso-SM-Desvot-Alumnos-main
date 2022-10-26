@@ -1,0 +1,48 @@
+<div class="contenido-general">
+
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h3>Candidatos</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="../../../../../assets/candidatos/candidato.png" alt="">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 my-3">
+            <h4>Pagar comision pre-registro</h4>
+        </div>
+        <div class="col-12">
+            <div class="align-rigth">
+                <button class="btn-prin w-100" (click)="pagarFee()">Pagar comision</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 my-3">
+            <h4>Agregar candidato</h4>
+        </div>
+        <div class="col-12">
+            <div>
+                <label class="custom-label" for="">Cuenta permitidas</label>
+                <button (click)="refrescarCuentas()" class="btn-none"><img class="img-refresh" src="../../../../../assets/iconos/refresh-page-option.png"></button>
+            </div>
+            <select class="w-100 custom-select" [formControl]="cuentasHControl">
+        <option *ngFor="let item of cuentasHabilitadas" value="{{item.direccionCuenta}}">{{item.direccionCuenta}}</option>
+      </select>
+        </div>
+        <div>
+            <label class="custom-label" for="">Nombre</label>
+        </div>
+        <div class="col-12 align-rigth">
+            <div>
+                <input class="custom-inpt w-100" type="text" [formControl]="nombreControl">
+            </div>
+            <button class="btn-prin w-100" (click)="agregarCandidato()">Agregar</button>
+        </div>
+    </div>
+</div>
